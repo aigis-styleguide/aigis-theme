@@ -1,0 +1,11 @@
+.aigis-module {
+  &__heading {
+    &:hover a {
+      &:before {
+      }
+    }
+  }
+  
+  &__filepath {
+  }
+}
