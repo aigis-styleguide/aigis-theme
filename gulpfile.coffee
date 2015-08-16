@@ -6,6 +6,8 @@ sass = require "gulp-sass"
 autoprefixer = require "gulp-autoprefixer"
 minify = require "gulp-minify-css"
 rename = require "gulp-rename"
+aigis = require "gulp-aigis"
+bs = require "browser-sync"
 
 src = [
   "src/**/*.scss"
@@ -42,6 +44,19 @@ gulp.task "build", ->
     .pipe rename (path) ->
       path.extname = ".min.css"
     .pipe gulp.dest(dist)
+
+gulp.task "template", ->
+  gulp.src "aigis_config.yml"
+    .pipe(aigis())
+
+gulp.task "serve", ["template"], ->
+  bs.init(
+    server:
+      baseDir: ["./docs"]
+      directory: true
+    notify: false,
+    host: "localhost"
+  )
 
 gulp.task "watch", ->
   gulp.watch src, ["sass"]
