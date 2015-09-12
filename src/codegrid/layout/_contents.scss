@@ -3,6 +3,7 @@
   padding-right: 10px;
   padding-left: 280px;
   margin: 0 auto;
+  font-size: 18px;
   &__body {
     color: #33331a;
     max-width: 960px;
@@ -11,6 +12,16 @@
     margin: 0 auto;
     & > *:first-child {
       margin-top: 0;
+    }
+
+    & > p {
+      margin-bottom: 1em;
+    }
+    & > h2 {
+      font-size: 30px;
+    }
+    & > h3 {
+      font-size: 24px;
     }
   }
 }

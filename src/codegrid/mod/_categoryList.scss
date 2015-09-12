@@ -1,10 +1,10 @@
 .aigis-categoryList {
   padding: 5px 10px;
-  
+  font-size: 14px;
   &__item {
     display: block;
     position: relative;
-    padding: 8px 10px 8px 10px;
+    padding: 3px 10px 3px 10px;
     color: #454545;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -19,10 +19,12 @@
     }
     
     &[data-path-level]:before {
-      content: "-";
-      margin-right: 10px;
+      font-family: sans-serif;
+      content: "\251C\2500";
+      //margin-right: 10px;
     }
     &[data-path-level="0"]:before {
+      content: "\25A0";
     }
     &[data-path-level="1"]:before {
       margin-left: 1em;
